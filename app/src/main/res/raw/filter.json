@@ -1,0 +1,60 @@
+{
+  "Filter": [
+    {
+      "FilterName": "XX0",
+      "FilterId": "00"
+    },
+    {
+      "FilterName": "XX1",
+      "FilterId": "01"
+    },
+    {
+      "FilterName": "XX2",
+      "FilterId": "02"
+    },
+    {
+      "FilterName": "XX3",
+      "FilterId": "03"
+    },
+    {
+      "FilterName": "XX4",
+      "FilterId": "04"
+    },
+    {
+      "FilterName": "XX5",
+      "FilterId": "05"
+    },
+    {
+      "FilterName": "XX6",
+      "FilterId": "06"
+    },
+    {
+      "FilterName": "XX7",
+      "FilterId": "07"
+    },
+    {
+      "FilterName": "XX8",
+      "FilterId": "08"
+    },
+    {
+      "FilterName": "XX9",
+      "FilterId": "09"
+    },
+    {
+      "FilterName": "XX10",
+      "FilterId": "10"
+    },
+    {
+      "FilterName": "XX11",
+      "FilterId": "11"
+    },
+    {
+      "FilterName": "XX12",
+      "FilterId": "12"
+    },
+    {
+      "FilterName": "XX13",
+      "FilterId": "13"
+    }
+  ]
+}

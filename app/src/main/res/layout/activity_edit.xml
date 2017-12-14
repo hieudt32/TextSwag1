@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/text_swag_black"
+    tools:context="com.example.baotu.textswag.activity.EditActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_image_edit"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <jp.co.cyberagent.android.gpuimage.GPUImageView
+            android:id="@+id/gpuimage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true" />
+        <ImageView
+            android:id="@+id/imv_preview_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_toolbar_edit"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:background="@color/text_swag_black_90"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/imb_home_edit"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:background="@drawable/item_button_crop"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_home" />
+
+        <com.example.baotu.textswag.view.MyTextView
+            android:id="@+id/tv_label_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="@color/text_swag_accent"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/imb_done_edit"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/item_button_crop"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_done" />
+
+        <ImageButton
+            android:id="@+id/imb_preview"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/imb_done_edit"
+            android:layout_toStartOf="@id/imb_done_edit"
+            android:background="@drawable/item_button_crop"
+            android:src="@drawable/ic_preview" />
+    </RelativeLayout>
+
+    <android.support.constraint.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="1dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="284dp" />
+
+    <com.example.baotu.textswag.view.VerticalSeekBar
+        android:id="@+id/sb_zoom"
+        android:layout_width="wrap_content"
+        android:layout_height="160dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:progressDrawable="@drawable/item_style_seekbar"
+        android:thumb="@drawable/item_thumb_seekbar"
+        android:max="100"
+        app:layout_constraintBottom_toTopOf="@+id/guideline"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <com.example.baotu.textswag.view.VerticalSeekBar
+        android:id="@+id/sb_alpha"
+        android:layout_width="wrap_content"
+        android:layout_height="160dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="20dp"
+        android:max="100"
+        android:progressDrawable="@drawable/item_style_seekbar"
+        android:thumb="@drawable/item_thumb_seekbar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+    <RelativeLayout
+        android:id="@+id/rl_color_picker"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/text_swag_transparent"
+        app:layout_constraintBottom_toTopOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.5">
+
+        <com.larswerkman.holocolorpicker.ColorPicker
+            android:id="@+id/picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="-110dp"
+            android:layout_marginRight="-110dp"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/imb_choose_color"
+            android:layout_width="62dp"
+            android:layout_height="62dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/item_round_button"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_choose_color" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_bottom_edit"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        android:background="@color/text_swag_black"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rcv_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/v_bottom_edit"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@color/text_swag_black_90"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/rl_bottom_edit"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <RelativeLayout
+        android:id="@+id/rl_tool_edit"
+        android:layout_width="61.5dp"
+        android:layout_height="290dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/item_background_tool_edit"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/rl_bottom_edit"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="43dp"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:id="@+id/imb_style"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="4dp"
+                android:background="@drawable/item_background_button"
+                android:src="@drawable/ic_text_style" />
+
+            <ImageButton
+                android:id="@+id/imb_font"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="4dp"
+                android:background="@drawable/item_background_button"
+                android:src="@drawable/ic_font_style" />
+
+            <ImageButton
+                android:id="@+id/imb_filter"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="4dp"
+                android:background="@drawable/item_background_button"
+                android:src="@drawable/ic_filter" />
+
+            <ImageButton
+                android:id="@+id/imb_effect"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_margin="4dp"
+                android:background="@drawable/item_background_button"
+                android:src="@drawable/ic_blend_color" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_font"
+        android:layout_width="180dp"
+        android:layout_height="0dp"
+        android:background="@color/text_swag_black_90"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/rl_bottom_edit"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rl_toolbar_edit">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rcv_font"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="75dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/text_swag_transparent"
+            app:layoutManager="android.support.v7.widget.LinearLayoutManager" />
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/imb_edit"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginBottom="14dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/item_round_button"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_edit"
+        app:layout_constraintBottom_toTopOf="@+id/rl_bottom_edit"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imb_gift"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="27dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
+        android:background="@drawable/item_round_button"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_gift"
+        app:layout_constraintBottom_toTopOf="@+id/rl_bottom_edit"
+        app:layout_constraintRight_toLeftOf="@+id/imb_edit" />
+
+    <ImageButton
+        android:id="@+id/imb_write"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:layout_marginBottom="28dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
+        android:background="@drawable/item_round_button"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_write"
+        app:layout_constraintBottom_toTopOf="@+id/rl_bottom_edit"
+        app:layout_constraintRight_toLeftOf="@+id/imb_gift" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginStart="3dp"
+        android:background="@color/text_swag_transparent"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/rl_bottom_edit"
+        app:layout_constraintLeft_toLeftOf="parent">
+
+        <ImageButton
+            android:id="@+id/imb_back_filter"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@drawable/item_round_button"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_back"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/imb_hide_font"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginStart="3dp"
+            android:background="@drawable/item_round_button"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_text"
+            android:visibility="gone" />
+
+        <ImageButton
+            android:id="@+id/imb_undo"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginStart="3dp"
+            android:background="@drawable/item_round_button"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_undo" />
+
+        <ImageButton
+            android:id="@+id/imb_redo"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_marginLeft="3dp"
+            android:layout_marginStart="3dp"
+            android:background="@drawable/item_round_button"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_redo" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

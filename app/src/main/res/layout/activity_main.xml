@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.baotu.textswag.activity.MainActivity">
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/splash"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imv_text_swag"
+        android:layout_width="0dp"
+        android:layout_height="95dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/text_swag"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imv_description"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/description"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/rl_menu"
+        android:layout_width="0dp"
+        android:layout_height="220dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/imv_description"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <View
+            android:id="@+id/v_center"
+            android:layout_width="5dp"
+            android:layout_height="5dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/item_view_center_main" />
+
+        <View
+            android:id="@+id/v_top"
+            android:layout_width="1dp"
+            android:layout_height="110dp"
+            android:layout_above="@id/v_center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/text_swag_white" />
+
+        <View
+            android:id="@+id/v_bottom"
+            android:layout_width="1dp"
+            android:layout_height="110dp"
+            android:layout_below="@id/v_center"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/text_swag_white" />
+
+        <View
+            android:id="@+id/v_left"
+            android:layout_width="110dp"
+            android:layout_height="1dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_toLeftOf="@id/v_center"
+            android:layout_toStartOf="@id/v_center"
+            android:background="@color/text_swag_white" />
+
+        <View
+            android:id="@+id/v_right"
+            android:layout_width="110dp"
+            android:layout_height="1dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_toEndOf="@id/v_center"
+            android:layout_toRightOf="@id/v_center"
+            android:background="@color/text_swag_white" />
+
+        <ImageButton
+            android:id="@+id/imb_album"
+            android:layout_width="86dp"
+            android:layout_height="86dp"
+            android:layout_above="@id/v_left"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/v_top"
+            android:layout_toStartOf="@id/v_top"
+            android:background="@drawable/item_background_button"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_album" />
+
+        <ImageButton
+            android:id="@+id/imb_camera"
+            android:layout_width="86dp"
+            android:layout_height="86dp"
+            android:layout_above="@id/v_right"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/v_top"
+            android:layout_toRightOf="@id/v_top"
+            android:background="@drawable/item_background_button"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_camera" />
+
+        <ImageButton
+            android:id="@+id/imb_more_app"
+            android:layout_width="86dp"
+            android:layout_height="86dp"
+            android:layout_below="@id/v_left"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@id/v_bottom"
+            android:layout_toStartOf="@id/v_bottom"
+            android:background="@drawable/item_background_button"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_more_app" />
+
+        <ImageButton
+            android:id="@+id/imb_gallery"
+            android:layout_width="86dp"
+            android:layout_height="86dp"
+            android:layout_below="@id/v_right"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@id/v_bottom"
+            android:layout_toRightOf="@id/v_bottom"
+            android:background="@drawable/item_background_button"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_gallery" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_ads"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="20dp"
+        android:background="@color/text_swag_black_70"
+        app:layout_constraintBottom_toTopOf="@+id/rl_menu"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imv_text_swag" />
+
+</android.support.constraint.ConstraintLayout>
